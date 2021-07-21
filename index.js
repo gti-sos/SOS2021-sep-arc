@@ -19,7 +19,7 @@ app.post("/hello",(req,res) => {
     res.send("Hello from this tiny server");
 });
 
-app.listen(port, () => {
+aapp.listen(port, () => {
     console.log(`Server ready listening on ${port}`);
 });
 //console.log(cool());
