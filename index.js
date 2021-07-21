@@ -15,7 +15,7 @@ app.get("/hello",(req,res) => {
 
 });
 
-app.post("/hello",(req,res) => {
+aapp.post("/hello",(req,res) => {
     res.send("Hello from this tiny server");
 });
 
