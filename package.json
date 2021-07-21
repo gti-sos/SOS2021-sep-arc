@@ -17,6 +17,7 @@
   },
   "homepage": "https://github.com/gti-sos/sos2021-sep-arc#readme",
   "dependencies": {
-    "cool-ascii-faces": "^1.3.4"
+    "cool-ascii-faces": "^1.3.4",
+    "express": "^4.17.1"
   }
 }
