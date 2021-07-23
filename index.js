@@ -111,6 +111,7 @@ app.get(BASE_API_PATH + "/info/schizophrenia_stats", (request,response)=>{
     });	
 
     var schizophrenia_stats_data = []
+
     app.get(BASE_API_PATH + "/schizophrenia_stats/loadInitialData", (req, res) => {
         schizophrenia_stats_data = [
             {
@@ -160,3 +161,14 @@ app.get(BASE_API_PATH + "/info/schizophrenia_stats", (request,response)=>{
         console.log(`Loaded Initial Data: <${JSON.stringify(schizophrenia_stats_data, null, 2)}>`);
         return res.sendStatus(200);
     });
+
+    app.get(BASE_API_PATH + "/schizophrenia-stats", (request,res)=>{
+        if (schizophrenia_stats_data.length != 0) {
+            console.log('schizophrenia_stats requested');
+          return res.send(JSON.stringify(schizophrenia_stats_data, null, 2));
+        } else {
+          console.log("No data found");
+          return res.sendStatus(404);
+        }
+         return res.sendStatus(200);
+      });
