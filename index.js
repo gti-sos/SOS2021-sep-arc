@@ -50,11 +50,12 @@ app.get("/info/schizophrenia_stats", (request,response)=>{
                              </br>
                              <table class="default" style="width:100%">
                             <tr>
-                                <td>country</td>
+                                
+                            <h3><td>country</td>
                                 <td>year</td>
                                 <td>schizophrenia_men</td>
                                 <td>schizophrenia_women</td>
-                                <td>schizophrenia_population</td>
+                                <td>schizophrenia_population</td></h3>
                             </tr>
                             <tr>
                                 <td>Andalucia</td>
