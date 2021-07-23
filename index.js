@@ -3,6 +3,11 @@ var express = require("express");
 var path = require("path");
 var app = express();
 
+var bodyParser = require("body-parser"); // F04
+app.use(bodyParser.json());
+
+var BASE_API_PATH = "/api/v1"; // F04
+
 
 var port = (process.env.PORT || 10000);
 
@@ -28,7 +33,7 @@ app.listen(port, () => {
 //console.log(`Server ready listening on ${port}`);
 
 //BASE DE DATOS 
-app.get("/info/schizophrenia_stats", (request,response)=>{
+app.get(BASE_API_PATH + "/info/schizophrenia_stats", (request,response)=>{
 
         response.send(`<!DOCTYPE html>
                     <html>
@@ -104,3 +109,54 @@ app.get("/info/schizophrenia_stats", (request,response)=>{
                         );
     
     });	
+
+    var schizophrenia_stats_data = []
+    app.get(BASE_API_PATH + "/schizophrenia_stats/loadInitialData", (req, res) => {
+        schizophrenia_stats_data = [
+            {
+                "country": 'Andalucia',
+                "year": 2008,
+                "schizophrenia_men": 2.37,
+                "schizophrenia_women": 1.59,
+                "schizophrenia_population":1.98
+            },
+            {
+                "country": 'Aragon',
+                "year": 2008,
+                "schizophrenia_men": 2.14,
+                "schizophrenia_women": 1.09,
+                "schizophrenia_population": 1.62
+            },
+            {
+                "country": 'Asturias',
+                "year": 2008,
+                "schizophrenia_men": 3.04,
+                "schizophrenia_women": 1.75,
+                "schizophrenia_population":2.54
+            },
+            {
+                "country": 'Baleares',
+                "year": 2008,
+                "schizophrenia_men": 1.39,
+                "schizophrenia_women": 1.45,
+                "schizophrenia_population": 1.42
+            },
+            {
+                "country": 'Canarias',
+                "year": 2008,
+                "schizophrenia_men": 5.46,
+                "schizophrenia_women": 2.00,
+                "schizophrenia_population": 3.73
+            },
+            {
+                "country": 'Cantabria',
+                "year": 2008,
+                "schizophrenia_men": 3.18,
+                "schizophrenia_women": 2.43,
+                "schizophrenia_population": 2.80
+            }
+        ];
+    
+        console.log(`Loaded Initial Data: <${JSON.stringify(schizophrenia_stats_data, null, 2)}>`);
+        return res.sendStatus(200);
+    });
