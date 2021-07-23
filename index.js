@@ -35,7 +35,7 @@ app.get("/info/schizophrenia_stats", (request,response)=>{
                         <head>
                             <title>schizophrenia_stats</title>
                             <style>
-                                table, tr, td {
+                                table, tr, td, th {
                                     border: 1px solid black;
                                     border-collapse: collapse;
                                 }
@@ -50,13 +50,11 @@ app.get("/info/schizophrenia_stats", (request,response)=>{
                              </br>
                              <table class="default" style="width:100%">
                             <tr>
-                            <b>
-                                <td>country</td>
-                                <td>year</td>
-                                <td>schizophrenia_men</td>
-                                <td>schizophrenia_women</td>
-                                <td>schizophrenia_population</td>
-                            </b>
+                                <th>country</th>
+                                <th>year</th>
+                                <th>schizophrenia_men</th>
+                                <th>schizophrenia_women</th>
+                                <th>schizophrenia_population</th>
                             </tr>
                             <tr>
                                 <td>Andalucia</td>
