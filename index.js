@@ -178,8 +178,8 @@ app.get(BASE_API_PATH + "/info/schizophrenia_stats", (request,response)=>{
 
 app.post(BASE_API_PATH + "/schizophrenia-stats", (req, res) => {
 	var data = req.body;
-	schizophrenia_data.push(data);
-	console.log(`new data pushed: <${JSON.stringify(schizophrenia_data, null, 2)}>`);
+	schizophrenia_stats_data.push(data);
+	console.log(`new data pushed: <${JSON.stringify(schizophrenia_stats_data, null, 2)}>`);
 	res.sendStatus(201);
 });
 
@@ -190,7 +190,7 @@ app.get(BASE_API_PATH + "/schizophrenia-stats/:country/:year", (req, res) => {
 	var year = parseInt(req.params.year);
 
 	console.log(`GET stat by country: <${country}> and year: <${year}>`);
-	for (var stat of schizophrenia_data) {
+	for (var stat of schizophrenia_stats_data) {
 		if (stat.country === country && stat.year === year) {
 			return res.status(200).json(stat);
 		}
@@ -207,9 +207,9 @@ app.delete(BASE_API_PATH + "/schizophrenia-stats/:country/:year", (req, res) => 
 
 	console.log(`DELETE by country <${country}> and year: <${year}>`);
 
-	for (var i = 0; i < schizophrenia_data.length; i++) {
-		if (schizophrenia_data[i]["country"] === country && schizophrenia_data[i]["year"] === year) {
-			schizophrenia_data.splice(i, 1);
+	for (var i = 0; i < schizophrenia_stats_data.length; i++) {
+		if (schizophrenia_stats_data[i]["country"] === country && schizophrenia_stats_data[i]["year"] === year) {
+			schizophrenia_stats_data.splice(i, 1);
 			return res.sendStatus(200);
 		}
 	}
@@ -227,14 +227,14 @@ app.put(BASE_API_PATH + "/schizophrenia-stats/:country/:year", (req, res) => {
 	console.log(`PUT ${newDatSchizophrenia.country} OVER ${country} `);
 	console.log(`PUT ${newDatSchizophrenia.year} OVER ${year} `);
 
-	if (schizophrenia_data.length == 0) {
+	if (schizophrenia_stats_data.length == 0) {
 		console.log("No Valido")
 		return res.sendStatus(404);
 	} else {
-		for (var i = 0; i < schizophrenia_data.length; i++) {
-			var stat = schizophrenia_data[i];
+		for (var i = 0; i < schizophrenia_stats_data.length; i++) {
+			var stat = schizophrenia_stats_data[i];
 			if (stat.country === country && stat.year === year) {
-				schizophrenia_data[i] = newDatSchizophrenia;
+				schizophrenia_stats_data[i] = newDatSchizophrenia;
 				return res.send('PUT success');
 			}
 		}
@@ -260,7 +260,7 @@ app.put(BASE_API_PATH + "/schizophrenia-stats", (req, res) => {
 //6.8 DELETE a la lista de recursos 
 
 app.delete(BASE_API_PATH + "/schizophrenia-stats", (req, res) => {
-	schizophrenia_data.length = 0;
+	schizophrenia_stats_data.length = 0;
 	console.log('schizophrenia deleted');
 	return res.sendStatus(200);
 
