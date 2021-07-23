@@ -7,4 +7,4 @@
 - **Repository**: [gti-sos/sos2021-sep-arc](https://github.com/gti-sos/sos2021-sep-arc)
 - **URL**: [https://sos2021-sep-arc.herokuapp.com](https://sos2021-sep-arc.herokuapp.com)
 -  **APIs**:
-    - []() (developed by [Ana Romero Caceres](https://github.com/anaromero99))
+    - [https://sos2021-sep-arc.herokuapp.com/api/v1/schizophrenia-stats](https://sos2021-sep-arc.herokuapp.com/api/v1/schizophrenia-stats)
