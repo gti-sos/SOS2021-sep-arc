@@ -6,5 +6,4 @@
 - **Project description**: My information is about analyzing pathological diseases by provinces in Spain.
 - **Repository**: [gti-sos/sos2021-sep-arc](https://github.com/gti-sos/sos2021-sep-arc)
 - **URL**: [https://sos2021-sep-arc.herokuapp.com](https://sos2021-sep-arc.herokuapp.com)
--  **APIs**:
-    - [https://sos2021-sep-arc.herokuapp.com/api/v1/schizophrenia-stats](https://sos2021-sep-arc.herokuapp.com/api/v1/schizophrenia-stats)
+-  **APIs**: [https://sos2021-sep-arc.herokuapp.com/api/v1/schizophrenia-stats](https://sos2021-sep-arc.herokuapp.com/api/v1/schizophrenia-stats)
