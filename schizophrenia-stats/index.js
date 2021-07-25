@@ -6,91 +6,13 @@ var app = express();
 
 app.use(bodyParser.json());
 app.use(express.json());
+var Datastore = require("nedb");
 
 module.exports.register = (app, BASE_API_PATH) => {
     //var cool =  require("cool-ascii-faces");
 
-/*
-//BASE DE DATOS 
-app.get(BASE_API_PATH + "/info/schizophrenia_stats", (request,response)=>{
-
-        response.send(`<!DOCTYPE html>
-                    <html>
-                        <head>
-                            <title>schizophrenia_stats</title>
-                            <style>
-                                table, tr, td, th {
-                                    border: 1px solid black;
-                                    border-collapse: collapse;
-                                }
-                                tr, td {
-                                    padding: 5px;
-                                    text-align: center;    
-                                }
-                            </style>
-                        </head>
-                        <body>
-                            <h3>Esquizofrenia - Datos en las comunidades autónomas de España</h3>
-                             </br>
-                             <table class="default" style="width:100%">
-                            <tr>
-                                <th>country</th>
-                                <th>year</th>
-                                <th>schizophrenia_men</th>
-                                <th>schizophrenia_women</th>
-                                <th>schizophrenia_population</th>
-                            </tr>
-                            <tr>
-                                <td>Andalucia</td>
-                                <td>2008</td>
-                                <td>2,37</td>
-                                <td>1,59</td>
-                                <td>1,98</td>
-                            </tr>
-                            <tr>
-                                <td>Aragón</td>
-                                <td>2008</td>
-                                <td>2,14</td>
-                                <td>1,09</td>
-                                <td>1,62</td>
-                            </tr>
-                            <tr>
-                                <td>Asturias</td>
-                                <td>2008</td>
-                                <td>3,04</td>
-                                <td>1,75</td>
-                                <td>2,54</td>
-                            </tr>
-                            <tr>
-                                <td>Baleares</td>
-                                <td>2008</td>
-                                <td>1,39</td>
-                                <td>1,45</td>
-                                <td>1,42</td>
-                            </tr>
-                            <tr>
-                                <td>Canarias</td>
-                                <td>2008</td>
-                                <td>5,46</td>
-                                <td>2,00</td>
-                                <td>3,73</td>
-                            </tr>
-                            <tr>
-                                <td>Cantabria</td>
-                                <td>2008</td>
-                                <td>3,18</td>
-                                <td>2,43</td>
-                                <td>2,80</td>
-                            </tr>
-                            </table>
-                        </body>
-                        </html>`
-                        );
-    
-    });	 */
-
     var schizophrenia_stats_data = []
-
+    
     app.get(BASE_API_PATH + "/schizophrenia-stats/loadInitialData", (req, res) => {
         schizophrenia_stats_data = [
             {
@@ -135,114 +57,186 @@ app.get(BASE_API_PATH + "/info/schizophrenia_stats", (request,response)=>{
                 "schizophrenia_women": 2.43,
                 "schizophrenia_population": 2.80
             }
-        ];
+       ];
+       
+     //  console.log(`Loaded Initial Data: <${JSON.stringify(schizophrenia_stats_data, null, 2)}>`);
+      // return res.sendStatus(200);
     
-        console.log(`Loaded Initial Data: <${JSON.stringify(schizophrenia_stats_data, null, 2)}>`);
-        return res.sendStatus(200);
-    });
-
-// 6.1 GET a la lista de recursos (p.e. “/api/v1/stats”) devuelve una lista con todos los recursos (un array de objetos en JSON)
-    app.get(BASE_API_PATH + "/schizophrenia-stats", (req,res)=>{
-        if (schizophrenia_stats_data.length != 0) {
-            console.log('schizophrenia_stats requested');
-          return res.send(JSON.stringify(schizophrenia_stats_data, null, 2));
+      db.find({ $or: [{ country: "Andalucia" }, { country: "Aragon" }] }, { _id: 0 }, function (err, data) {
+        if (err) {
+            console.error("ERROR accesing DB in GET");
+            res.sendStatus(500);
         } else {
-          console.log("No data found");
-          return res.sendStatus(404);
+            if (data.length == 0) {
+                db.insert(schizophrenia_stats_data);
+                console.log(`Loaded initial data: <${JSON.stringify(schizophrenia_stats_data, null, 2)}>`);
+                res.sendStatus(201);
+            } else {
+                console.error(`initial data already exists`);
+                res.sendStatus(409);
+            }
         }
-         return res.sendStatus(200);
-      });
-
-//6.2 POST 
-
-app.post(BASE_API_PATH + "/schizophrenia-stats", (req, res) => {
-	var data = req.body;
-	schizophrenia_stats_data.push(data);
-	console.log(`new data pushed: <${JSON.stringify(schizophrenia_stats_data, null, 2)}>`);
-	res.sendStatus(201);
-});
-
-//6.3 GET a un recurso 
-
-app.get(BASE_API_PATH + "/schizophrenia-stats/:country/:year", (req, res) => {
-	var country = req.params.country;
-	var year = parseInt(req.params.year);
-
-	console.log(`GET stat by country: <${country}> and year: <${year}>`);
-	for (var stat of schizophrenia_stats_data) {
-		if (stat.country === country && stat.year === year) {
-			return res.status(200).json(stat);
-		}
-	}
-
-	return res.sendStatus(404);
-});
-
-//6.4 DELETE a un recurso 
-
-app.delete(BASE_API_PATH + "/schizophrenia-stats/:country/:year", (req, res) => {
-	var country = req.params.country;
-	var year = parseInt(req.body.year);
-
-	console.log(`DELETE by country <${country}> and year: <${year}>`);
-
-	for (var i = 0; i < schizophrenia_stats_data.length; i++) {
-		if (schizophrenia_stats_data[i]["country"] === country && schizophrenia_stats_data[i]["year"] === year) {
-			schizophrenia_stats_data.splice(i, 1);
-			return res.sendStatus(200);
-		}
-	}
-
-	return res.sendStatus(404);
-});
-
-//6.5 PUT a un recurso  
-
-app.put(BASE_API_PATH + "/schizophrenia-stats/:country/:year", (req, res) => {
-	var country = req.params.country;
-	var year = parseInt(req.params.year);
-	var newDatSchizophrenia = req.body;
-
-	console.log(`PUT ${newDatSchizophrenia.country} OVER ${country} `);
-	console.log(`PUT ${newDatSchizophrenia.year} OVER ${year} `);
-
-	if (schizophrenia_stats_data.length == 0) {
-		console.log("No Valido")
-		return res.sendStatus(404);
-	} else {
-		for (var i = 0; i < schizophrenia_stats_data.length; i++) {
-			var stat = schizophrenia_stats_data[i];
-			if (stat.country === country && stat.year === year) {
-				schizophrenia_stats_data[i] = newDatSchizophrenia;
-				return res.send('PUT success');
-			}
-		}
-	}
-});
-
-//6.6 POST a un recurso 
-
-app.post(BASE_API_PATH + "/schizophrenia-stats/:country/:date", (req, res) => {
-	console.log("POST no valido/encontrado");
-	return res.sendStatus(405);
-
-});
-
-//6.7 PUT a la lista de recursos 
-
-app.put(BASE_API_PATH + "/schizophrenia-stats", (req, res) => {
-	console.log("PUT no valido/encontrado");
-	return res.sendStatus(405);
-
-});
-
-//6.8 DELETE a la lista de recursos 
-
-app.delete(BASE_API_PATH + "/schizophrenia-stats", (req, res) => {
-	schizophrenia_stats_data.length = 0;
-	console.log('schizophrenia deleted');
-	return res.sendStatus(200);
-
-});
-
-};
+    });
+    })
+    app.get(BASE_API_PATH + "/schizophrenia-stats", (req,res)=>{
+    
+        var query = req.query;
+    
+    //Aquí se obtienen offset y limit con query, si son null, le hacemos un delete.
+    var limit = parseInt(query.limit);
+    var offset = parseInt(query.offset);
+    
+    //offset y limit.
+    delete query.offset;
+    delete query.limit;
+    
+    //Parseamos el año a Integer, mis otras 3 propiedades numéricas también son necesarias.
+    if (query.hasOwnProperty("year")) {
+        query.year = parseInt(query.year);
+        console.log(query.year);
+    }
+    if (query.hasOwnProperty("schizophrenia_women")) {
+        query.schizophrenia_women = parseFloat(query.schizophrenia_women);
+        console.log(query.schizophrenia_women);
+    }
+    if (query.hasOwnProperty("schizophrenia_men")) {
+        query.schizophrenia_men = parseFloat(query.schizophrenia_men);
+        console.log(query.schizophrenia_men);
+    }
+    if (query.hasOwnProperty("schizophrenia_population")) {
+        query.schizophrenia_population = parseFloat(query.schizophrenia_population);
+        console.log(query.schizophrenia_population);
+    }
+    
+    console.log(query);
+    
+    db.find(query).skip(offset).limit(limit).exec((error, schizophrenia_stats) => {
+        schizophrenia_stats.forEach((n) => {
+            delete n._id;
+        });
+    
+        if (schizophrenia_stats.length < 0) {
+            res.sendStatus(400, "Bad request");
+            console.log("Requested data is INVALID");
+        }
+        else {
+            res.send(JSON.stringify(schizophrenia_stats, null, 2));
+            console.log("Data sent:" + JSON.stringify(schizophrenia_stats, null, 2));
+    
+        }
+    });
+    });
+    
+    
+     app.post(BASE_API_PATH + "/schizophrenia-stats", (req, res) => {
+        var data = req.body;
+        var country = req.body.country;
+        var year = req.body.year;
+    
+        db.find({ "country": country, "year": year }).exec((error, schizophrenia_stats) => {
+            if (schizophrenia_stats.length > 0) {
+                res.sendStatus(409);
+                console.log("There's an object with those primary keys");
+                return;
+            }
+            if ((data == null)
+                    || (data.country == null)
+                    || (data.year == null)
+                    || (data.schizophrenia_men == null)
+                    || (data.schizophrenia_women == null)
+                    || (data.schizophrenia_population == null)
+                    || ((Object.keys(data).length != 5))) {
+    
+                    res.sendStatus(400, "Falta uno o más campos");
+                    console.log(data);
+                    console.log("POST not created");
+                    return;
+                }
+                db.insert(data);
+    
+                res.sendStatus(201, "Post created");
+                console.log(JSON.stringify(data, null, 2));
+            });
+    });
+    
+    app.get(BASE_API_PATH + "/schizophrenia-stats/:country/:year", (req, res) => {
+       var country = req.params.country;
+       var year = parseInt(req.params.year);
+       db.find({ "country": country, "year": year }).exec((err, param) => {
+        if (param.length == 1) {
+            delete param[0]._id;
+      res.send(JSON.stringify(param[0], null, 2));
+      console.log("/GET - Recurso Específico /country/year: " + JSON.stringify(param[0]), null, 2);
+    }
+    else {
+      res.sendStatus(404, "Not found");
+    }
+    });
+    
+    });
+    
+    
+    app.delete(BASE_API_PATH + "/schizophrenia-stats/:country/:year", (req, res) => {
+       var country = req.params.country;
+       var year = parseInt(req.body.year);
+               db.remove({ "country": country, "year": year }, { multi: true }, (err, paramsDeleted) => {
+                if (paramsDeleted == 0) {
+                    res.sendStatus(404, "Not found");
+           }
+       else {
+        res.sendStatus(200);
+    }
+    });
+    });
+    
+    
+    app.put(BASE_API_PATH + "/schizophrenia-stats/:country/:year", (req, res) => {
+     
+               var countryData = req.params.country; //Pillar el contenido después de los dos puntos.
+               var countryD = req.body.country;
+       
+               var yearData = parseInt(req.params.year);
+               var yearD = parseInt(req.body.year);
+       
+               var body = req.body;
+               if (countryData != countryD || yearData != yearD) {
+                   res.sendStatus(409);
+                   console.warn("There is a conflict!");
+           }
+           else {
+            db.update({ "country": countryData, "year": yearData }, body, (err, paramsUpdated) => {
+                if (paramsUpdated == 0) {
+                    res.sendStatus(404, "Not found");
+                }
+                else {
+                    res.sendStatus(200);
+                    console.log("PUT Correcto");
+                }
+            });
+        }
+    });
+    
+    
+    app.post(BASE_API_PATH + "/schizophrenia-stats/:country/:date", (req, res) => {
+       console.log("POST no valido/encontrado");
+       return res.sendStatus(405);
+    
+    });
+    
+    
+    app.put(BASE_API_PATH + "/schizophrenia-stats", (req, res) => {
+       console.log("PUT no valido/encontrado");
+       return res.sendStatus(405);
+    
+    });
+    
+    
+    app.delete(BASE_API_PATH + "/schizophrenia-stats", (req, res) => { 
+       db.remove({}, { multi: true }, (error, schizophrenia_stats_deleted) => {
+        console.log(schizophrenia_stats_deleted + " schizophrenia_stats deleted");
+    });
+    res.sendStatus(200, "OK");
+    
+    });
+    
+    };
