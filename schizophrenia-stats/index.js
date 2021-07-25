@@ -1,18 +1,14 @@
-module.exports.register = (app, BASE_API_PATH) => { 
-};
+var express = require("express");
+var path = require("path");
+var bodyParser = require("body-parser"); // F04
+var BASE_API_PATH = "/api/v1"; // F04
+var app = express();
 
-//var cool =  require("cool-ascii-faces");
+app.use(bodyParser.json());
+app.use(express.json());
 
-app.get("/hello",(req,res) => {
-    //response.send(cool());
-    res.send("Hello from this tiny server");
-    //console.log("New request has arrived");
-
-});
-
-app.post("/hello",(req,res) => {
-    res.send("Hello from this tiny server");
-});
+module.exports.register = (app, BASE_API_PATH) => {
+    //var cool =  require("cool-ascii-faces");
 
 /*
 //BASE DE DATOS 
@@ -95,7 +91,7 @@ app.get(BASE_API_PATH + "/info/schizophrenia_stats", (request,response)=>{
 
     var schizophrenia_stats_data = []
 
-    app.get(BASE_API_PATH + "/schizophrenia_stats/loadInitialData", (req, res) => {
+    app.get(BASE_API_PATH + "/schizophrenia-stats/loadInitialData", (req, res) => {
         schizophrenia_stats_data = [
             {
                 "country": 'Andalucia',
@@ -247,4 +243,6 @@ app.delete(BASE_API_PATH + "/schizophrenia-stats", (req, res) => {
 	console.log('schizophrenia deleted');
 	return res.sendStatus(200);
 
-})
+});
+
+};
