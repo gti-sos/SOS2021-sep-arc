@@ -1,4 +1,4 @@
-var schizophrenia_stats_api = require("./schizophrenia_stats"); // M I L E S T O N E Nº 5
+var schizophrenia_stats_api = require("./schizophrenia-stats"); // M I L E S T O N E Nº 5
 schizophrenia_stats_api.register(app, BASE_API_PATH);
 
 var express = require("express");
