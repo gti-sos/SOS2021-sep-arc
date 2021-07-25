@@ -7,6 +7,9 @@ var app = express();
 app.use(bodyParser.json());
 app.use(express.json());
 var Datastore = require("nedb");
+var datafile = path.join(__dirname, 'schizophrenia-stats.db');
+var db = new Datastore({ filename: datafile, autoload: true });
+var schizophrenia_stats_data = [];
 
 module.exports.register = (app, BASE_API_PATH) => {
     //var cool =  require("cool-ascii-faces");
