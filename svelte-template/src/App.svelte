@@ -1,11 +1,16 @@
-<script>
-	export let name;
+<script lang="ts">
+	import NotFound from "./NotFound.svelte";
+	import Home from "./Home.svelte";
+	import schizophrenia_stats from "./schizophrenia_stats_API/App.svelte";
+	const routes = {
+		"/": Home,
+		"/schizophrenia_stats": schizophrenia_stats,
+		"*": NotFound,
+	};
 </script>
-
-<main>
-	<h1>Hello {name}!</h1>
-	<p>Visit the <a href="https://svelte.dev/tutorial">Svelte tutorial</a> to learn how to build Svelte apps.</p>
-</main>
+	<main>
+		<h1>sos2021-sep-arc</h1>
+	</main>
 
 <style>
 	main {
