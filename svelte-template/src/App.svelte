@@ -1,4 +1,6 @@
 <script lang="ts">
+	
+	import Router from "svelte-spa-router";
 	import NotFound from "./NotFound.svelte";
 	import Home from "./Home.svelte";
 	import schizophrenia_stats from "./schizophrenia_stats_API/App.svelte";
@@ -10,6 +12,7 @@
 </script>
 	<main>
 		<h1>sos2021-sep-arc</h1>
+		<Router {routes} />
 	</main>
 
 <style>

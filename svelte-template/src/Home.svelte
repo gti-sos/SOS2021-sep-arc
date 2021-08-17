@@ -53,7 +53,7 @@
                             </h3>
                             <p class="text-white-50 mb-0">schizophrenia_stats</p>
                             <br /><a
-                                href="https://documenter.getpostman.com/view/14948110/TzJsheN4"
+                                href="https://documenter.getpostman.com/view/14948110/TzsZroMB"
                                 ><button type="button" class="btn btn-light"
                                     >Postman</button
                                 ></a>
@@ -79,7 +79,7 @@
                                 Estadísticas de Esquizofrenia
                             </h3>
                             <p class="text-white-50 mb-0">Schizophrenia_stats</p>
-                            <br /><a href="#/schizophrenia_stats"
+                            <br /><a href="#/schizophrenia-stats"
                                 ><button type="button" class="btn btn-primary"
                                     >Pulse aquí</button
                                 ></a>
