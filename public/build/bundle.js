@@ -5450,9 +5450,9 @@ var app = (function () {
     			h1.textContent = "sos2021-sep-arc";
     			t1 = space();
     			create_component(router.$$.fragment);
-    			attr_dev(h1, "class", "svelte-1tky8bj");
+    			attr_dev(h1, "class", "svelte-jdtmk");
     			add_location(h1, file, 12, 2, 330);
-    			attr_dev(main, "class", "svelte-1tky8bj");
+    			attr_dev(main, "class", "svelte-jdtmk");
     			add_location(main, file, 11, 1, 321);
     		},
     		l: function claim(nodes) {
