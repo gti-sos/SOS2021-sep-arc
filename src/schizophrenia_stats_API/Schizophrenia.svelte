@@ -1,12 +1,11 @@
 <script>
     import { Button, Table } from "sveltestrap";
-    const API_SCHIZOPHRENIA_STATS = "/api/v1/schizophrenia_stats";
+    const API_SCHIZOPHRENIA_STATS = "/api/v1/schizophrenia-stats";
     let dataCharged = false;
     let schizophreniastats = [];
     async function loadStats() {
         console.log("Loading data...");
         const cargaDeDatos = await fetch(API_SCHIZOPHRENIA_STATS + "/loadInitialData");
-        console.log("problems");
         dataCharged = true;
         if (cargaDeDatos.ok) {
             console.log("Ok.");

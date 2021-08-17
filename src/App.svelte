@@ -5,7 +5,7 @@
 	import schizophrenia_stats from "./schizophrenia_stats_API/App.svelte";
 	const routes = {
 		"/": Home,
-		"/schizophrenia_stats": schizophrenia_stats,
+		"/schizophrenia-stats": schizophrenia_stats,
 		"*": NotFound,
 	};
 </script>

@@ -1,5 +1,5 @@
 
-(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35730/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
 var app = (function () {
     'use strict';
 
@@ -4546,7 +4546,7 @@ var app = (function () {
     	return child_ctx;
     }
 
-    // (50:8) {:else}
+    // (49:8) {:else}
     function create_else_block_1(ctx) {
     	let button;
     	let current;
@@ -4597,14 +4597,14 @@ var app = (function () {
     		block,
     		id: create_else_block_1.name,
     		type: "else",
-    		source: "(50:8) {:else}",
+    		source: "(49:8) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (46:8) {#if dataCharged}
+    // (45:8) {#if dataCharged}
     function create_if_block_1(ctx) {
     	let button;
     	let current;
@@ -4654,14 +4654,14 @@ var app = (function () {
     		block,
     		id: create_if_block_1.name,
     		type: "if",
-    		source: "(46:8) {#if dataCharged}",
+    		source: "(45:8) {#if dataCharged}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (51:12) <Button style="background-color: darkgreen;" on:click={loadStats}>
+    // (50:12) <Button style="background-color: darkgreen;" on:click={loadStats}>
     function create_default_slot_3(ctx) {
     	let t;
 
@@ -4681,14 +4681,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_3.name,
     		type: "slot",
-    		source: "(51:12) <Button style=\\\"background-color: darkgreen;\\\" on:click={loadStats}>",
+    		source: "(50:12) <Button style=\\\"background-color: darkgreen;\\\" on:click={loadStats}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (47:12) <Button style="background-color: darkgreen;" disabled>
+    // (46:12) <Button style="background-color: darkgreen;" disabled>
     function create_default_slot_2(ctx) {
     	let t;
 
@@ -4708,14 +4708,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_2.name,
     		type: "slot",
-    		source: "(47:12) <Button style=\\\"background-color: darkgreen;\\\" disabled>",
+    		source: "(46:12) <Button style=\\\"background-color: darkgreen;\\\" disabled>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (55:8) <Button style="background-color: darkgray" on:click={deleteStats}>
+    // (54:8) <Button style="background-color: darkgray" on:click={deleteStats}>
     function create_default_slot_1(ctx) {
     	let t;
 
@@ -4735,14 +4735,14 @@ var app = (function () {
     		block,
     		id: create_default_slot_1.name,
     		type: "slot",
-    		source: "(55:8) <Button style=\\\"background-color: darkgray\\\" on:click={deleteStats}>",
+    		source: "(54:8) <Button style=\\\"background-color: darkgray\\\" on:click={deleteStats}>",
     		ctx
     	});
 
     	return block;
     }
 
-    // (85:4) {:else}
+    // (84:4) {:else}
     function create_else_block(ctx) {
     	let br;
     	let t0;
@@ -4759,13 +4759,13 @@ var app = (function () {
     			t2 = space();
     			a = element("a");
     			a.textContent = "Página Principal";
-    			add_location(br, file$2, 85, 8, 3060);
+    			add_location(br, file$2, 84, 8, 3026);
     			set_style(p, "text-align", "center");
     			set_style(p, "background-color", "antiquewhite");
-    			add_location(p, file$2, 86, 8, 3076);
+    			add_location(p, file$2, 85, 8, 3042);
     			attr_dev(a, "href", "/");
     			attr_dev(a, "class", "svelte-1noyhrl");
-    			add_location(a, file$2, 89, 8, 3218);
+    			add_location(a, file$2, 88, 8, 3184);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -4790,14 +4790,14 @@ var app = (function () {
     		block,
     		id: create_else_block.name,
     		type: "else",
-    		source: "(85:4) {:else}",
+    		source: "(84:4) {:else}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (60:4) {#if schizophreniastats.length != 0}
+    // (59:4) {#if schizophreniastats.length != 0}
     function create_if_block(ctx) {
     	let br;
     	let t0;
@@ -4824,10 +4824,10 @@ var app = (function () {
     			t1 = space();
     			a = element("a");
     			a.textContent = "Página Principal";
-    			add_location(br, file$2, 60, 8, 2100);
+    			add_location(br, file$2, 59, 8, 2066);
     			attr_dev(a, "href", "/");
     			attr_dev(a, "class", "svelte-1noyhrl");
-    			add_location(a, file$2, 83, 8, 3005);
+    			add_location(a, file$2, 82, 8, 2971);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, br, anchor);
@@ -4868,14 +4868,14 @@ var app = (function () {
     		block,
     		id: create_if_block.name,
     		type: "if",
-    		source: "(60:4) {#if schizophreniastats.length != 0}",
+    		source: "(59:4) {#if schizophreniastats.length != 0}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (73:16) {#each schizophreniastats as stat}
+    // (72:16) {#each schizophreniastats as stat}
     function create_each_block(ctx) {
     	let tr;
     	let td0;
@@ -4917,12 +4917,12 @@ var app = (function () {
     			td4 = element("td");
     			t8 = text(t8_value);
     			t9 = space();
-    			add_location(td0, file$2, 74, 24, 2639);
-    			add_location(td1, file$2, 75, 24, 2688);
-    			add_location(td2, file$2, 76, 24, 2734);
-    			add_location(td3, file$2, 77, 24, 2796);
-    			add_location(td4, file$2, 78, 24, 2860);
-    			add_location(tr, file$2, 73, 20, 2609);
+    			add_location(td0, file$2, 73, 24, 2605);
+    			add_location(td1, file$2, 74, 24, 2654);
+    			add_location(td2, file$2, 75, 24, 2700);
+    			add_location(td3, file$2, 76, 24, 2762);
+    			add_location(td4, file$2, 77, 24, 2826);
+    			add_location(tr, file$2, 72, 20, 2575);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -4958,14 +4958,14 @@ var app = (function () {
     		block,
     		id: create_each_block.name,
     		type: "each",
-    		source: "(73:16) {#each schizophreniastats as stat}",
+    		source: "(72:16) {#each schizophreniastats as stat}",
     		ctx
     	});
 
     	return block;
     }
 
-    // (62:8) <Table bordered style="text-align: center;">
+    // (61:8) <Table bordered style="text-align: center;">
     function create_default_slot(ctx) {
     	let thead;
     	let tr;
@@ -5013,14 +5013,14 @@ var app = (function () {
     				each_blocks[i].c();
     			}
 
-    			add_location(th0, file$2, 64, 20, 2225);
-    			add_location(th1, file$2, 65, 20, 2260);
-    			add_location(th2, file$2, 66, 20, 2294);
-    			add_location(th3, file$2, 67, 20, 2359);
-    			add_location(th4, file$2, 68, 20, 2424);
-    			add_location(tr, file$2, 63, 16, 2199);
-    			add_location(thead, file$2, 62, 12, 2174);
-    			add_location(tbody, file$2, 71, 12, 2528);
+    			add_location(th0, file$2, 63, 20, 2191);
+    			add_location(th1, file$2, 64, 20, 2226);
+    			add_location(th2, file$2, 65, 20, 2260);
+    			add_location(th3, file$2, 66, 20, 2325);
+    			add_location(th4, file$2, 67, 20, 2390);
+    			add_location(tr, file$2, 62, 16, 2165);
+    			add_location(thead, file$2, 61, 12, 2140);
+    			add_location(tbody, file$2, 70, 12, 2494);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, thead, anchor);
@@ -5078,7 +5078,7 @@ var app = (function () {
     		block,
     		id: create_default_slot.name,
     		type: "slot",
-    		source: "(62:8) <Table bordered style=\\\"text-align: center;\\\">",
+    		source: "(61:8) <Table bordered style=\\\"text-align: center;\\\">",
     		ctx
     	});
 
@@ -5137,8 +5137,8 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t1 = space();
     			if_block1.c();
-    			add_location(div, file$2, 44, 4, 1578);
-    			add_location(main, file$2, 43, 0, 1566);
+    			add_location(div, file$2, 43, 4, 1544);
+    			add_location(main, file$2, 42, 0, 1532);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -5245,7 +5245,7 @@ var app = (function () {
     	return block;
     }
 
-    const API_SCHIZOPHRENIA_STATS = "/api/v1/schizophrenia_stats";
+    const API_SCHIZOPHRENIA_STATS = "/api/v1/schizophrenia-stats";
 
     function instance$2($$self, $$props, $$invalidate) {
     	let { $$slots: slots = {}, $$scope } = $$props;
@@ -5256,7 +5256,6 @@ var app = (function () {
     	async function loadStats() {
     		console.log("Loading data...");
     		const cargaDeDatos = await fetch(API_SCHIZOPHRENIA_STATS + "/loadInitialData");
-    		console.log("problems");
     		$$invalidate(0, dataCharged = true);
 
     		if (cargaDeDatos.ok) {
@@ -5499,7 +5498,7 @@ var app = (function () {
 
     	const routes = {
     		"/": Home,
-    		"/schizophrenia_stats": App$1,
+    		"/schizophrenia-stats": App$1,
     		"*": NotFound
     	};
 
