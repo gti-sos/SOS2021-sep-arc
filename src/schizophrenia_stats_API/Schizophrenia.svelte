@@ -8,7 +8,7 @@
         const cargaDeDatos = await fetch(API_SCHIZOPHRENIA_STATS + "/loadInitialData");
         console.log("problems");
         dataCharged = true;
-        if (cargaDeDatos.status) {
+        if (cargaDeDatos.ok) {
             console.log("Ok.");
             const res = await fetch(API_SCHIZOPHRENIA_STATS);
             if (res.ok) {
