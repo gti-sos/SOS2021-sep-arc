@@ -3,11 +3,13 @@
 	import NotFound from "./NotFound.svelte";
 	import Info from "./Info.svelte";
 	import Home from "./Home.svelte";
-	import schizophrenia_stats from "./front/schizophrenia_stats_API/App.svelte";
+	import schizophrenia_stats from "./front/schizophrenia_stats_API/Schizophrenia.svelte";
+	import edit_schizophrenia_stats from "./front/schizophrenia_stats_API/SchizophreniaEdit.svelte";
 	const routes = {
 		"/": Home,
 		"/info": Info,
 		"/schizophrenia-stats": schizophrenia_stats,
+		"/schizophrenia-stats/:country/:year": edit_schizophrenia_stats,
 		"*": NotFound,
 	};
 </script>
