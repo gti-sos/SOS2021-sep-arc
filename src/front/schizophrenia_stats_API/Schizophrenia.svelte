@@ -80,13 +80,13 @@
                 {/each}
             </tbody>
         </Table>
-        <a href="/">Página Principal</a>
+        <a href="#/https://sos2021-sep-arc.herokuapp.com/">Página Principal</a>
     {:else}
         <br />
         <p style="text-align: center; background-color: antiquewhite;">
             Si desea ver los datos presione el botón.
         </p>
-        <a href="/">Página Principal</a>
+        <a href="#/https://sos2021-sep-arc.herokuapp.com/">Página Principal</a>
     {/if}
 </main>
 

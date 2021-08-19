@@ -1,48 +1,87 @@
-<!DOCTYPE html>
-<html lang="en">
+<script>
+    import {
+        Button,
+        Card,
+        CardBody,
+        CardFooter,
+        CardHeader,
+        CardSubtitle,
+        CardText,
+        CardTitle,
+        Col,
+        Container,
+        Nav,
+        NavItem,
+        NavLink,
+        Row,
+    } from "sveltestrap";
+</script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>sos2021-sep-arc</title>
-</head>
+<main>
+    
+    
+    <Container>
+        <Col xs="auto">
+            <Card class="mb-3">
+                <CardHeader>
+                    <CardTitle><h5>schizophrenia_stats</h5></CardTitle>
+                </CardHeader>
+                <CardBody>
+                    <CardSubtitle />
+                    <CardText
+                        >Estadísticas acerca de los datos recogidos por esquizofrenia
+                        en las comunidades autónomas de España.</CardText>
+                    <div>
+                    <a href="https://github.com/anaromero99">
+                        <Button color="warning">Github</Button>
+                    </a></div>
+                    <br>
+                    <div>
+                    <a href="https://sos2021-sep-arc.herokuapp.com/api/v1/schizophrenia-stats">
+                        <Button color="info">API v1</Button>
+                    </a></div>
+                    <br>
+                    <div>
+                    <a href="/#/schizophrenia-stats">
+                        <Button color="info">Interfaz de Esquizofrenia</Button>
+                    </a></div>
+                    <br>
+                    <div>
+                    <a href="https://documenter.getpostman.com/view/14948110/TzsZroMB">
+                        <Button color="info">Documentación Postman D01</Button>
+                    </a></div>
+                </CardBody>
+                <CardFooter
+                    >desarrollado por
+                    <a href="https://github.com/anaromero99">Ana Romero Cáceres</a>
+                </CardFooter>
+            </Card>
+        </Col>
+    </Container>
 
-<body>
-    <h1> sos2021-sep-arc</h1>
-    <ul>
-        <li>
-            <b>Desarrolladora</b>
-            <ul>
-                <li><a href="http://github.com/anaromero99">Ana Romero Caceres</a></li>
-            </ul>
-        </li>
-        <li>
-            <b>Project description: These data serve to publicize the situation
-                current situation in Spain, in this case, affected by some
-                medical pathologies.</b>:
-        </li>
-        <li>
-            <b>Repository:</b> <a href="http://github.com/gti-sos/sos2021-sep-arc">http://github.com/gti-sos/sos2021-sep-arc</a>
-        </li>
-        <li>
-            <b>URL</b>: <a href="http://sos2021-sep-arc.herokuapp.com">http://sos2021-sep-arc.herokuapp.com</a>
-        </li>
-        <li>
-            <b>APIs:</b>
-            <ul>
-                <li>
-                    <a
-                        href="https://sos2021-sep-arc.herokuapp.com/api/v1/schizophrenia_stats">https://sos2021-sep-arc.herokuapp.com/api/v1/schizophrenia_stats</a>
-                        <a href="https://documenter.getpostman.com/view/14948110/TzsZroMB"> Postman Data Doc - schizophrenia_stats - D01 </a>
-                        (developed by <a href="https://github.com/anaromero99">Ana Romero Caceres</a>)
-                                        
-                </li>
-            </ul>
-        </li>
-    </ul>
+    <Nav>
+        <NavItem>
+            <NavLink href="/">Volver a la página principal</NavLink>
+        </NavItem>
+    </Nav>
+</main>
 
-
-</body>
-
-</html>
+<style>
+    main {
+        text-align: center;
+        padding: 1em;
+        max-width: 240px;
+        margin: 0 auto;
+    }
+    h1 {
+        color: #0d497e;
+        text-transform: uppercase;
+        font-size: 4em;
+        font-weight: 100;
+    }
+    @media (min-width: 640px) {
+        main {
+            max-width: none;
+        }
+    }
+</style>
