@@ -1,6 +1,6 @@
 var express = require("express");
 var bodyParser = require("body-parser"); // F04
-var schizophrenia_stats_api = require("./schizophrenia-stats"); // M I L E S T O N E Nº 5
+var schizophrenia_stats_api = require(".src/back/schizophrenia-stats"); // M I L E S T O N E Nº 5
 var port = (process.env.PORT || 10000);
 var BASE_API_PATH = "/api/v1"; // F04
 var app = express();

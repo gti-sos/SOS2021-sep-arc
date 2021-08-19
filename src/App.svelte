@@ -1,10 +1,12 @@
 <script lang="ts">
 	import Router from "svelte-spa-router";
 	import NotFound from "./NotFound.svelte";
+	import Info from "./Info.svelte";
 	import Home from "./Home.svelte";
-	import schizophrenia_stats from "./schizophrenia_stats_API/App.svelte";
+	import schizophrenia_stats from "./front/schizophrenia_stats_API/App.svelte";
 	const routes = {
 		"/": Home,
+		"/info": Info,
 		"/schizophrenia-stats": schizophrenia_stats,
 		"*": NotFound,
 	};
