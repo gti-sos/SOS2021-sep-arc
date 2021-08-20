@@ -143,7 +143,7 @@
                 on:click={loadschizophreniaStats}>Cargar datos iniciales
     </Button>
         {:else}
-            <Button style="background-color: crimson;" on:click={loadschizophreniaStats}>
+            <Button style="background-color: info;" outline color="btn btn-info" on:click={loadschizophreniaStats}>
                 Cargar datos iniciales</Button>
         {/if}
         <Button style="font-size: 16px;border-radius: 4px;background-color: danger;"
