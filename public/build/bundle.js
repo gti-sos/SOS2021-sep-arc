@@ -9060,7 +9060,7 @@ var app = (function () {
     			add_location(input0, file$2, 170, 25, 6808);
     			add_location(td0, file$2, 169, 20, 6778);
     			attr_dev(input1, "type", "number");
-    			attr_dev(input1, "placeholder", "Ej. 2033");
+    			attr_dev(input1, "placeholder", "Ej. 2008");
     			add_location(input1, file$2, 176, 25, 7035);
     			add_location(td1, file$2, 175, 20, 7005);
     			attr_dev(input2, "type", "number");

@@ -180,8 +180,8 @@ module.exports.register = (app, BASE_API_PATH) => {
     
     
     app.delete(BASE_API_PATH + "/schizophrenia-stats/:country/:year", (req, res) => {
-       var country = req.params.country;
-       var year = parseInt(req.body.year);
+        var country = req.params.country;
+        var year = parseInt(req.params.year);
                db.remove({ "country": country, "year": year }, { multi: true }, (err, paramsDeleted) => {
                 if (paramsDeleted == 0) {
                     res.sendStatus(404, "Not found");
