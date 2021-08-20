@@ -18,8 +18,6 @@
 </script>
 
 <main>
-    
-    
     <Container>
         <Col xs="auto">
             <Card class="mb-3">
@@ -29,31 +27,46 @@
                 <CardBody>
                     <CardSubtitle />
                     <CardText
-                        >Estadísticas acerca de los datos recogidos por esquizofrenia
-                        en las comunidades autónomas de España.</CardText>
+                        >Estadísticas acerca de los datos recogidos por
+                        esquizofrenia en las comunidades autónomas de España.</CardText
+                    >
                     <div>
-                    <a href="https://github.com/anaromero99">
-                        <Button color="warning">Github</Button>
-                    </a></div>
-                    <br>
+                        <a href="https://github.com/anaromero99">
+                            <Button color="warning">Github</Button>
+                        </a>
+                    </div>
+                    <br />
                     <div>
-                    <a href="https://sos2021-sep-arc.herokuapp.com/api/v1/schizophrenia-stats">
-                        <Button color="info">API v1</Button>
-                    </a></div>
-                    <br>
+                        <a
+                            href="https://sos2021-sep-arc.herokuapp.com/api/v1/schizophrenia-stats"
+                        >
+                            <Button color="info">API v1</Button>
+                        </a>
+                    </div>
+                    <br />
                     <div>
-                    <a href="/#/schizophrenia-stats">
-                        <Button color="info">Interfaz de Esquizofrenia</Button>
-                    </a></div>
-                    <br>
+                        <a href="/#/schizophrenia-stats">
+                            <Button color="info"
+                                >Interfaz de Esquizofrenia</Button
+                            >
+                        </a>
+                    </div>
+                    <br />
                     <div>
-                    <a href="https://documenter.getpostman.com/view/14948110/TzsZroMB">
-                        <Button color="info">Documentación Postman D01</Button>
-                    </a></div>
+                        <a
+                            href="https://documenter.getpostman.com/view/14948110/TzsZroMB"
+                        >
+                            <Button color="info"
+                                >Documentación Postman D01</Button
+                            >
+                        </a>
+                    </div>
                 </CardBody>
                 <CardFooter
                     >desarrollado por
-                    <a href="https://github.com/anaromero99">Ana Romero Cáceres</a>
+                    <a href="https://github.com/anaromero99"
+                        >Ana Romero Cáceres</a
+                    >
                 </CardFooter>
             </Card>
         </Col>

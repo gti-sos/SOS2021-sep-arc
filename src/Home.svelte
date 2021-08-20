@@ -1,8 +1,7 @@
-<script>   
+<script>
 </script>
 
-<main>
-</main>
+<main />
 <body>
     <!-- Masthead-->
     <br /><br />
@@ -43,25 +42,36 @@
                 </h2>
                 <hr class="my-4" />
                 <div class="row">
-                  <div class="col-xs-3 col-md-4 text-center"></div>
+                    <div class="col-xs-3 col-md-4 text-center" />
                     <div class="col-lg-4 col-md-4 text-center">
                         <div class="mt-5">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="white" class="bi bi-book-half" viewBox="0 0 16 16">
-                                <path d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"/>
-                              </svg>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="60"
+                                height="60"
+                                fill="white"
+                                class="bi bi-book-half"
+                                viewBox="0 0 16 16"
+                            >
+                                <path
+                                    d="M8.5 2.687c.654-.689 1.782-.886 3.112-.752 1.234.124 2.503.523 3.388.893v9.923c-.918-.35-2.107-.692-3.287-.81-1.094-.111-2.278-.039-3.213.492V2.687zM8 1.783C7.015.936 5.587.81 4.287.94c-1.514.153-3.042.672-3.994 1.105A.5.5 0 0 0 0 2.5v11a.5.5 0 0 0 .707.455c.882-.4 2.303-.881 3.68-1.02 1.409-.142 2.59.087 3.223.877a.5.5 0 0 0 .78 0c.633-.79 1.814-1.019 3.222-.877 1.378.139 2.8.62 3.681 1.02A.5.5 0 0 0 16 13.5v-11a.5.5 0 0 0-.293-.455c-.952-.433-2.48-.952-3.994-1.105C10.413.809 8.985.936 8 1.783z"
+                                />
+                            </svg>
                             <i
                                 class="fas fa-4x fa-user-injured text-white mb-4"
                             />
-                            <h3 class="h4 mb-2 text-white">
-                                Esquizofrenia
-                            </h3>
-                            <p class="text-white-50 mb-0">schizophrenia_stats</p>
+                            <h3 class="h4 mb-2 text-white">Esquizofrenia</h3>
+                            <p class="text-white-50 mb-0">
+                                schizophrenia_stats
+                            </p>
                             <br /><a
                                 href="https://documenter.getpostman.com/view/14948110/TzsZroMB"
                                 ><button type="button" class="btn btn-info"
                                     >Postman</button
-                                ></a>
+                                ></a
+                            >
                         </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -74,28 +84,40 @@
                 <h2 class="text-center text-white mt-0">Acceso a la API</h2>
                 <hr class="divider my-4" />
                 <div class="row">
-                    <div class="col-xs-3 col-md-4 text-center"></div>
+                    <div class="col-xs-3 col-md-4 text-center" />
                     <div class="col-lg-4 col-md-4 text-center">
                         <div class="mt-5">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="white" class="bi bi-bar-chart-fill" viewBox="0 0 16 16">
-                                <path d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2z"/>
-                              </svg>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="60"
+                                height="60"
+                                fill="white"
+                                class="bi bi-bar-chart-fill"
+                                viewBox="0 0 16 16"
+                            >
+                                <path
+                                    d="M1 11a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H2a1 1 0 0 1-1-1v-3zm5-4a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7a1 1 0 0 1-1 1H7a1 1 0 0 1-1-1V7zm5-5a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1h-2a1 1 0 0 1-1-1V2z"
+                                />
+                            </svg>
                             <i
                                 class="fas fa-4x fa-user-injured text-white mb-4"
                             />
                             <h3 class="h4 mb-2 text-white">
                                 Estadísticas de Esquizofrenia
                             </h3>
-                            <p class="text-white-50 mb-0">Schizophrenia_stats</p>
+                            <p class="text-white-50 mb-0">
+                                Schizophrenia_stats
+                            </p>
                             <br /><a href="#/schizophrenia-stats"
                                 ><button type="button" class="btn btn-info"
                                     >Pulse aquí</button
-                                ></a>
+                                ></a
+                            >
                         </div>
                     </div>
-                    
                 </div>
             </div>
+        </div>
     </section>
 
     <!-- Equipo-->
@@ -105,12 +127,21 @@
                 <h2 class="text-center text-white mt-0">Desarrolladora</h2>
                 <hr class="divider dark my-4" />
                 <div class="row">
-                    <div class="col-xs-3 col-md-4 text-center"></div>
+                    <div class="col-xs-3 col-md-4 text-center" />
                     <div class="col-lg-4 col-md-4 text-center">
                         <div class="mt-5">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="60" height="60" fill="white" class="bi bi-person-fill" viewBox="0 0 16 16">
-                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"/>
-                              </svg>
+                            <svg
+                                xmlns="http://www.w3.org/2000/svg"
+                                width="60"
+                                height="60"
+                                fill="white"
+                                class="bi bi-person-fill"
+                                viewBox="0 0 16 16"
+                            >
+                                <path
+                                    d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"
+                                />
+                            </svg>
                             <i class="fas fa-4x fa-user text-white mb-4" />
                             <h3 class="h4 mb-2 text-white">
                                 Ana Romero Cáceres
@@ -120,9 +151,11 @@
                             </p>
                             <br /><a href="https://github.com/anaromero99"
                                 ><button type="button" class="btn btn-info"
-                                >Github</button></a>
+                                    >Github</button
+                                ></a
+                            >
                         </div>
-                    </div>    
+                    </div>
                 </div>
             </div>
         </div>

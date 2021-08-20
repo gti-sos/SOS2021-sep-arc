@@ -13,10 +13,11 @@
 		"*": NotFound,
 	};
 </script>
-	<main>
-		<h1>sos2021-sep-arc</h1>
-		<Router {routes} />
-	</main>
+
+<main>
+	<h1>sos2021-sep-arc</h1>
+	<Router {routes} />
+</main>
 
 <style>
 	main {
@@ -27,7 +28,7 @@
 	}
 
 	h1 {
-		color: #900C3F;
+		color: #900c3f;
 		text-transform: uppercase;
 		font-size: 4em;
 		font-weight: 100;
