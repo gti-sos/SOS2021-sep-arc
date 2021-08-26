@@ -158,7 +158,7 @@
     background: #f8f8f8;
   }
   .highcharts-data-table tr:hover {
-    background: #f1f7ff;
+    background: #3d4044;
   }
   
 </style>

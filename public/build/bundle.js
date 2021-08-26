@@ -18592,7 +18592,7 @@ var app = (function () {
     		c: function create() {
     			p = element("p");
     			p.textContent = `${/*errorMsg*/ ctx[1]}`;
-    			attr_dev(p, "class", "error svelte-7sif9m");
+    			attr_dev(p, "class", "error svelte-1ym40h5");
     			add_location(p, file$1, 103, 8, 3313);
     		},
     		m: function mount(target, anchor) {
@@ -18837,11 +18837,11 @@ var app = (function () {
     			add_location(div0, file$1, 89, 4, 3068);
     			attr_dev(div1, "id", "container");
     			add_location(div1, file$1, 97, 10, 3214);
-    			attr_dev(figure, "class", "highcharts-figure svelte-7sif9m");
+    			attr_dev(figure, "class", "highcharts-figure svelte-1ym40h5");
     			add_location(figure, file$1, 96, 8, 3168);
     			add_location(div2, file$1, 95, 4, 3153);
     			add_location(div3, file$1, 101, 4, 3275);
-    			attr_dev(main, "class", "svelte-7sif9m");
+    			attr_dev(main, "class", "svelte-1ym40h5");
     			add_location(main, file$1, 82, 0, 2920);
     		},
     		l: function claim(nodes) {
