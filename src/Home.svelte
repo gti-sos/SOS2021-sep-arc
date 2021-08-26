@@ -97,14 +97,11 @@
                 <div>
 
                     <h6 class="text-center text-white mt-0">
-                        Vistas de Analíticas
+                        Vista de Analítica
                     </h6>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
 
-                    <a href="/#/info">
-                        <button type="button" class="btn btn-warning">General</button>
-                    </a>
-                    <a href="/#/info">
+                    <a href="/#/analytics/schizoprenia_chart">
                         <button type="button" class="btn btn-success">Esquizofrenia</button>
                     </a>
                     

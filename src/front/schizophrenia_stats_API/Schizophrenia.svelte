@@ -32,7 +32,7 @@
     onMount(getschizophrenia);
     //GET
     async function getschizophreniaCountryYear() {
-        const res = await fetch("/api/v1/schizophrenia-stats");
+        const res = await fetch("/api/v2/schizophrenia-stats");
         if (res.ok) {
             //PAIS
             const json = await res.json();
@@ -52,13 +52,13 @@
     async function getschizophrenia() {
         console.log("Fetching schizophrenia-stats...");
         const res = await fetch(
-            "/api/v1/schizophrenia-stats?offset=" +
+            "/api/v2/schizophrenia-stats?offset=" +
                 elementPage * offset +
                 "&limit=" +
                 elementPage
         );
         const nextPage = await fetch(
-            "/api/v1/schizophrenia-stats?offset=" +
+            "/api/v2/schizophrenia-stats?offset=" +
                 elementPage * (offset + 1) +
                 "&limit=" +
                 elementPage
@@ -96,7 +96,7 @@
             errorMsg =
                 "No puede introducir campos en blanco o campos que no sean numéricos";
         } else {
-            const res = await fetch("/api/v1/schizophrenia-stats", {
+            const res = await fetch("/api/v2/schizophrenia-stats", {
                 method: "POST",
                 body: JSON.stringify(newSchizophrenia),
                 headers: {
@@ -118,7 +118,7 @@
     //DELETE
     async function deleteschizophrenia(country, year) {
         const res = await fetch(
-            "/api/v1/schizophrenia-stats/" + country + "/" + year,
+            "/api/v2/schizophrenia-stats/" + country + "/" + year,
             {
                 method: "DELETE",
             }
@@ -130,7 +130,7 @@
         errorMsg = false;
     }
     async function deleteschizophreniaData() {
-        const res = await fetch("/api/v1/schizophrenia-stats", {
+        const res = await fetch("/api/v2/schizophrenia-stats", {
             method: "DELETE",
         }).then(function (res) {
             getschizophrenia();
@@ -142,7 +142,7 @@
     //LOAD INITIAL DATA
     async function loadInitialDataschizophrenia() {
         const res = await fetch(
-            "/api/v1/schizophrenia-stats/loadInitialData"
+            "/api/v2/schizophrenia-stats/loadInitialData"
         ).then(function (res) {
             getschizophrenia();
         });
@@ -151,7 +151,7 @@
     }
     //BÚSQUEDA
     async function searchschizophrenia(country, year) {
-        var url = "/api/v1/schizophrenia-stats";
+        var url = "/api/v2/schizophrenia-stats";
         if (country != "" && year != "") {
             url = url + "?year=" + year + "&country=" + country;
         } else if (country != "" && year == "") {
@@ -210,9 +210,9 @@
                 <tr>
                     <th>País</th>
                     <th>Año</th>
-                    <th>Datos de Estrés por Hombre</th>
-                    <th>Datos de Estrés por Mujer</th>
-                    <th>Datos de Estrés en Población</th>
+                    <th>Índice de esquizofrenia por hombre</th>
+                    <th>Índice de esquizofrenia por mujer</th>
+                    <th>Índice de esquizofrenia en población</th>
                     <th>Acciones</th>
                 </tr>
             </thead>
