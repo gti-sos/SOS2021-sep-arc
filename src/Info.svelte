@@ -57,6 +57,16 @@
                             href="https://documenter.getpostman.com/view/14948110/TzsZroMB"
                         >
                             <Button color="info"
+                                >Documentación Postman v1</Button
+                            >
+                        </a>
+                    </div>
+                    <br />
+                    <div>
+                        <a
+                            href="https://documenter.getpostman.com/view/14948110/TzzGJEJL"
+                        >
+                            <Button color="info"
                                 >Documentación Postman v2</Button
                             >
                         </a>

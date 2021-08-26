@@ -868,7 +868,7 @@
 			"response": []
 		},
 		{
-			"name": "GET stress_stats (DELETE ALL) Copy",
+			"name": "GET schizophrenia-stats (DELETE ALL)",
 			"event": [
 				{
 					"listen": "test",
@@ -887,17 +887,17 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "https://sos2021-11.herokuapp.com/api/v2/stress_stats",
+					"raw": "https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats",
 					"protocol": "https",
 					"host": [
-						"sos2021-11",
+						"sos2021-sep-arc",
 						"herokuapp",
 						"com"
 					],
 					"path": [
 						"api",
 						"v2",
-						"stress_stats"
+						"schizophrenia-stats"
 					]
 				}
 			},

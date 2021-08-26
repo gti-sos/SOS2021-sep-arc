@@ -11,4 +11,5 @@ jobs:
       - uses: actions/checkout@v2
       - run: npm install &
       - run: npx newman tests/schizophrenia_stats_integration.json 
-      - run: npx newman tests/schizophrenia_stats_integration_D01.json 
+  #    - run: npx newman tests/schizophrenia_stats_integration_D01.json 
+      - run: npx newman tests/schizophrenia_stats_integration_v2.json 

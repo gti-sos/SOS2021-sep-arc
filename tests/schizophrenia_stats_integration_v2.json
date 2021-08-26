@@ -1,0 +1,907 @@
+{
+	"info": {
+		"_postman_id": "5e96eedd-7702-4d4e-b375-fb69737f17de",
+		"name": "sos2021-sep-arc-D01 v2",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "GET schizophrenia-stats (EMPTY)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats",
+					"protocol": "https",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Petición loadInitialData",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 201\", function(){\r",
+							"    pm.response.to.have.status(201);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats/loadInitialData",
+					"protocol": "https",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats",
+						"loadInitialData"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Limit (1 o 2 Tablas)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats?limit=2",
+					"protocol": "https",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "2"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Limit & Offset -> Andalucia",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats?limit=1&offset=1&year=2008",
+					"protocol": "https",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "offset",
+							"value": "1"
+						},
+						{
+							"key": "year",
+							"value": "2008"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Limit & Offset -> Aragon",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats?limit=1&offset=0&year=2008",
+					"protocol": "https",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats"
+					],
+					"query": [
+						{
+							"key": "limit",
+							"value": "1"
+						},
+						{
+							"key": "offset",
+							"value": "0"
+						},
+						{
+							"key": "year",
+							"value": "2008"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Petición GET a recursos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})\r",
+							"\r",
+							"pm.test(\"There are 6 schizophrenia_stats_boards\", function(){\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.eql(6);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats",
+					"protocol": "https",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET a un Recurso - Not found",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 404\", function () {\r",
+							"    pm.response.to.have.status(404);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats/Asturias/2018",
+					"protocol": "https",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats",
+						"Asturias",
+						"2018"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Peticion GET a Recurso",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats/Andalucia/2008",
+					"protocol": "https",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats",
+						"Andalucia",
+						"2008"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Petición POST",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Successful POST request\", function(){\r",
+							"    pm.expect(pm.response.code).to.be.oneOf([201,202]);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"country\": \"Asturias\",\r\n    \"year\": 2017,\r\n    \"schizophrenia_men\": 3.04,\r\n    \"schizophrenia_women\": 1.75,\r\n    \"schizophrenia_population\":2.54\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats",
+					"protocol": "https",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "POST - conflict",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 409\", function () {\r",
+							"    pm.response.to.have.status(409);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\t\"country\": \"Asturias\",\r\n    \"year\": 2008,\r\n    \"schizophrenia_men\": 3.04,\r\n    \"schizophrenia_women\": 1.75,\r\n    \"schizophrenia_population\":2.54\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats",
+					"protocol": "https",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET schizophrenia-stats (POST)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"There are 7 schizophrenia_stats_boards\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.eql(7);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats",
+					"protocol": "https",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Asturias mdt schizophrenia_men",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats?schizophrenia_men=3.04",
+					"protocol": "https",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats"
+					],
+					"query": [
+						{
+							"key": "schizophrenia_men",
+							"value": "3.04"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Asturias mdt schizophrenia_women",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats?schizophrenia_women=1.75",
+					"protocol": "https",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats"
+					],
+					"query": [
+						{
+							"key": "schizophrenia_women",
+							"value": "1.75"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET Asturias mdt schizophrenia_population",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats?schizophrenia_population=2.54",
+					"protocol": "https",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats"
+					],
+					"query": [
+						{
+							"key": "schizophrenia_population",
+							"value": "2.54"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE a un recurso",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function(){\r",
+							"    pm.response.to.have.status(200);\r",
+							"})"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"country\": \"Aragon\",\r\n    \"year\": 2008,\r\n    \"schizophrenia_men\": 2.14,\r\n    \"schizophrenia_women\": 1.09,\r\n    \"schizophrenia_population\": 1.62\r\n}           ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats/Aragon/2008",
+					"protocol": "http",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats",
+						"Aragon",
+						"2008"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET schizophrenia-stats (DELETE)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"There are 6 schizophrenia_stats_boards\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.eql(6);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats",
+					"protocol": "https",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Petición PUT a un recurso",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"country\": \"Andalucia\",\r\n    \"year\": 2008,\r\n    \"schizophrenia_men\": 2.37,\r\n    \"schizophrenia_women\": 1.59,\r\n    \"schizophrenia_population\": 1.98\r\n} ",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats/Andalucia/2008",
+					"protocol": "http",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats",
+						"Andalucia",
+						"2008"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET schizophrenia-stats (PUT)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							"\r",
+							"pm.test(\"There are 6 schizophrenia_stats_boards, one of them is updated\", function () {\r",
+							"    var jsonData = pm.response.json();\r",
+							"    pm.expect(jsonData.length).to.eql(6);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats",
+					"protocol": "https",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Petición POST erróneo",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {\r",
+							"    pm.response.to.have.status(405);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "POST",
+				"header": [],
+				"url": {
+					"raw": "http://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats/Aragon/2008",
+					"protocol": "http",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats",
+						"Aragon",
+						"2008"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Petición PUT Errónea",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 405\", function () {\r",
+							"    pm.response.to.have.status(405);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats",
+					"protocol": "https",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "DELETE a recursos",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});"
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats",
+					"protocol": "https",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "GET schizophrenia-stats (DELETE ALL)",
+			"event": [
+				{
+					"listen": "test",
+					"script": {
+						"exec": [
+							"pm.test(\"Status code is 200\", function () {\r",
+							"    pm.response.to.have.status(200);\r",
+							"});\r",
+							""
+						],
+						"type": "text/javascript"
+					}
+				}
+			],
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats",
+					"protocol": "https",
+					"host": [
+						"sos2021-sep-arc",
+						"herokuapp",
+						"com"
+					],
+					"path": [
+						"api",
+						"v2",
+						"schizophrenia-stats"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
