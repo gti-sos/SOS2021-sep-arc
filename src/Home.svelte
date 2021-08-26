@@ -39,8 +39,17 @@
             <div class="container">
                 <h2 class="text-center text-white mt-0">
                     Información de las APIs
+                    <hr class="divider my-4" />
                 </h2>
-                <hr class="my-4" />
+                <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+                   
+                    <a href="/#/info">
+                        <button type="button" class="btn btn-dark">Información</button>
+                    </a>
+                    
+                </div>
+                
+               
                 <div class="row">
                     <div class="col-xs-3 col-md-4 text-center" />
                     <div class="col-lg-4 col-md-4 text-center">
@@ -81,7 +90,9 @@
     <section class="page-section" id="apis">
         <div class="jumbotron bg-dark">
             <div class="container">
+                
                 <h2 class="text-center text-white mt-0">Acceso a la API</h2>
+                
                 <hr class="divider my-4" />
                 <div>
 
