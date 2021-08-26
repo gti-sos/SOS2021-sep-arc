@@ -83,6 +83,23 @@
             <div class="container">
                 <h2 class="text-center text-white mt-0">Acceso a la API</h2>
                 <hr class="divider my-4" />
+                <div>
+
+                    <h6 class="text-center text-white mt-0">
+                        Vistas de Analíticas
+                    </h6>
+                    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+
+                    <a href="/#/info">
+                        <button type="button" class="btn btn-warning">General</button>
+                    </a>
+                    <a href="/#/info">
+                        <button type="button" class="btn btn-success">Esquizofrenia</button>
+                    </a>
+                    
+                </div>
+                    </div>
+
                 <div class="row">
                     <div class="col-xs-3 col-md-4 text-center" />
                     <div class="col-lg-4 col-md-4 text-center">

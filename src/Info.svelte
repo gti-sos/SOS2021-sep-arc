@@ -38,9 +38,9 @@
                     <br />
                     <div>
                         <a
-                            href="https://sos2021-sep-arc.herokuapp.com/api/v1/schizophrenia-stats"
+                            href="https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats"
                         >
-                            <Button color="info">API v1</Button>
+                            <Button color="info">API v2</Button>
                         </a>
                     </div>
                     <br />
@@ -57,7 +57,7 @@
                             href="https://documenter.getpostman.com/view/14948110/TzsZroMB"
                         >
                             <Button color="info"
-                                >Documentación Postman D01</Button
+                                >Documentación Postman v2</Button
                             >
                         </a>
                     </div>
