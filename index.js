@@ -13,7 +13,11 @@ schizophrenia_stats_api_v2.register(app, BASE_API_PATH_v2);
 
 var path = require("path");
 
+var cors = require("cors");
+
 app.use("/", express.static(path.join(__dirname, "public")));
+
+app.use(cors());
 
 app.listen(port, () => {
     console.log(`Server ready listening on ${port}`);
