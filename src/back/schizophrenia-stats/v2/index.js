@@ -241,5 +241,15 @@ module.exports.register = (app, BASE_API_PATH_v2) => {
     res.sendStatus(200, "OK");
     
     });
+    app.use("/proxySchizophrenia", function(req, res) {
+        var apiServerHost = "https://2021-sep-arc.herokuapp.com"
+        
+        console.log(`apiServerHost= <${apiServerHost}>`);
+        console.log(`baseURL = <${req.baseUrl}>`);
+        console.log(`url = <${req.url}>`);
+        var url = apiServerHost + req.url;
+        console.log(`piped: ${req.baseUrl}${req.url} -> ${url}`);
+        req.pipe(request(url)).pipe(res);
+        });
     
     };
