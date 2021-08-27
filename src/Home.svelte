@@ -46,6 +46,10 @@
                     <a href="/#/info">
                         <button type="button" class="btn btn-dark">Información</button>
                     </a>
+
+                    <a href="/#/integrations">
+                        <button type="button" class="btn btn-dark">Integraciones</button>
+                    </a>
                     
                 </div>
                 
@@ -101,7 +105,7 @@
                     </h6>
                     <div class="d-grid gap-2 d-md-flex justify-content-md-center">
 
-                    <a href="/#/analytics/schizoprenia_chart">
+                    <a href="/#/analytics">
                         <button type="button" class="btn btn-success">Esquizofrenia</button>
                     </a>
                     

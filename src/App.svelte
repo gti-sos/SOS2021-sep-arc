@@ -3,15 +3,18 @@
 	import NotFound from "./NotFound.svelte";
 	import Info from "./Info.svelte";
 	import Home from "./Home.svelte";
+	import Integrations from "./Integrations.svelte";
 	import schizophrenia_stats from "./front/schizophrenia_stats_API/Schizophrenia.svelte";
 	import edit_schizophrenia_stats from "./front/schizophrenia_stats_API/SchizophreniaEdit.svelte";
 	import schizoprenia_chart from "./front/schizophrenia_stats_API/SchizophreniaChart.svelte";
+	
 	const routes = {
 		"/": Home,
 		"/info": Info,
+		"/integrations": Integrations,
 		"/schizophrenia-stats": schizophrenia_stats,
 		"/schizophrenia-stats/:country/:year": edit_schizophrenia_stats,
-		"/analytics/schizoprenia_chart" :schizoprenia_chart,
+		"/analytics" :schizoprenia_chart,
 		"*": NotFound,
 	};
 </script>

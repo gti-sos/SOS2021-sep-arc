@@ -12,9 +12,15 @@ app.use(bodyParser.json());
 var request = require("request");
 app.use(express.json());
 app.use(cors());
+
+//MILESTONE Nº5
 schizophrenia_stats_api.register(app, BASE_API_PATH);
 schizophrenia_stats_api_v2.register(app, BASE_API_PATH_v2);
 
+//D03
+
+var schizophrenia_stats_api_INT = require("./src/back/schizophrenia-stats/integration");
+schizophrenia_stats_api_INT.register(app, "/api/integration");
 
 app.use("/", express.static(path.join(__dirname, "public")));
 
@@ -22,5 +28,3 @@ app.use("/", express.static(path.join(__dirname, "public")));
 app.listen(port, () => {
     console.log(`Server ready listening on ${port}`);
 });
-//INTEGRACIONES
-
