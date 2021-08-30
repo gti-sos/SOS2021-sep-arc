@@ -50,6 +50,10 @@
                     <a href="/#/integrations">
                         <button type="button" class="btn btn-dark">Integraciones</button>
                     </a>
+
+                    <a href="/#/about">
+                        <button type="button" class="btn btn-dark">Acerca de</button>
+                    </a>
                     
                 </div>
                 

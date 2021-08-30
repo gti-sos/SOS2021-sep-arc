@@ -24,6 +24,26 @@ schizophrenia_stats_api_INT.register(app, "/api/integration");
 
 app.use("/", express.static(path.join(__dirname, "public")));
 
+//Integración Interna G24
+
+var pathEmployment='/api/v2/children-employment';
+var apiServerHostEmployment= 'https://sos2021-24.herokuapp.com/';
+
+app.use(pathEmployment, function(req, res) {
+  var url = apiServerHostEmployment + req.url;
+  console.log('piped: ' + req.url);
+  req.pipe(request(url)).pipe(res);
+});
+
+//Integración Interna G24
+var pathVIH='/api/v2/children-with';
+var apiServerHostVIH= 'https://sos2021-24.herokuapp.com/';
+
+app.use(pathVIH, function(req, res) {
+  var url = apiServerHostVIH + req.url;
+  console.log('piped: ' + req.url);
+  req.pipe(request(url)).pipe(res);
+});
 
 app.listen(port, () => {
     console.log(`Server ready listening on ${port}`);
