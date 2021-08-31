@@ -33,41 +33,41 @@
                             esquizofrenia en las comunidades autónomas de España.</CardText
                         >
                         <div>
-                            <a href="https://github.com/anaromero99">
-                                <Button color="dark">Integración externa</Button>
+                            <a href="https://sos2021-sep-arc.herokuapp.com/#/integrations/Pobreza">
+                                <Button color="dark">Integración externa de Pobreza</Button>
                             </a>
                         </div>
                         <br />
                         <div>
                             <a
-                                href="https://sos2021-sep-arc.herokuapp.com/api/v2/schizophrenia-stats"
+                                href="https://sos2021-sep-arc.herokuapp.com/#/integrations/Covid19"
                             >
-                                <Button color="dark">Integración externa</Button>
+                                <Button color="dark">Integración externa Covid-19</Button>
                             </a>
                         </div>
                         <br />
                         <div>
-                            <a href="/#/schizophrenia-stats">
+                            <a href="https://sos2021-sep-arc.herokuapp.com/#/integrations/ChildrenEmployment">
                                 <Button color="success"
-                                    >Integración interna</Button
+                                    >Integración interna Children Employment</Button
                                 >
                             </a>
                         </div>
                         <br />
                         <div>
                             <a
-                                href="https://documenter.getpostman.com/view/14948110/TzsZroMB"
+                                href="https://sos2021-sep-arc.herokuapp.com/#/integrations/ChildrenSchool"
                             >
                                 <Button color="success"
-                                    >Integración interna</Button
+                                    >Integración interna Children School</Button
                                 >
                             </a>
                         </div>
                         <br />
                         <div>
-                            <a href="/#/schizophrenia-stats">
+                            <a href="https://sos2021-sep-arc.herokuapp.com/#/integrations/ChildrenVIH">
                                 <Button color="success"
-                                    >Integración interna</Button
+                                    >Integración interna Children with VIH</Button
                                 >
                             </a>
                         </div>
