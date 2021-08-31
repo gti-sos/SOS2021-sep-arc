@@ -57,6 +57,16 @@ app.use(pathCOVID, function(req, res) {
   req.pipe(request(url)).pipe(res);
 });
 
+//Integración Externa Pobreza
+var pathPobreza='/v2/countries?yesterday=false&sort=deaths&allowNull=true';
+var apiServerHostPobreza= 'https://disease.sh';
+
+app.use(pathPobreza, function(req, res) {
+  var url = apiServerHostPobreza + req.url;
+  console.log('piped: ' + req.url);
+  req.pipe(request(url)).pipe(res);
+});
+
 app.listen(port, () => {
   console.log(`Server ready listening on ${port}`);
 });
