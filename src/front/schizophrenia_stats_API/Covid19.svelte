@@ -53,7 +53,7 @@
         },
       },
       title: {
-        text: "Datos de Covid19 por la Universidad de Johns Hopkins",
+        text: "Datos de Covid19",
         align: "left",
       },
 
