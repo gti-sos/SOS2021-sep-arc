@@ -16,6 +16,7 @@
 	import Covid19 from "./front/schizophrenia_stats_API/Covid19.svelte"
 	
 	import Pobreza from "./front/schizophrenia_stats_API/Pobreza.svelte"
+	import Sanity from "./front/schizophrenia_stats_API/Sanity.svelte"
 	
 	const routes = {
 		"/": Home,
@@ -28,6 +29,7 @@
 		"/integrations/childrenSchool": ChildrenSchool,
 		"/integrations/Covid19": Covid19,
 		"/integrations/Pobreza": Pobreza,
+		"/integrations/Sanity": Sanity,
 		"/schizophrenia-stats": schizophrenia_stats,
 		"/schizophrenia-stats/:country/:year": edit_schizophrenia_stats,
 		"/analytics" :schizoprenia_chart,

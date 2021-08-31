@@ -33,21 +33,21 @@
                             esquizofrenia en las comunidades autónomas de España.</CardText
                         >
                         <div>
-                            <a href="https://sos2021-sep-arc.herokuapp.com/#/integrations/Pobreza">
+                            <a href="/#/integrations/Pobreza">
                                 <Button color="dark">Integración externa de Pobreza</Button>
                             </a>
                         </div>
                         <br />
                         <div>
                             <a
-                                href="https://sos2021-sep-arc.herokuapp.com/#/integrations/Covid19"
+                                href="/#/integrations/Covid19"
                             >
                                 <Button color="dark">Integración externa Covid-19</Button>
                             </a>
                         </div>
                         <br />
                         <div>
-                            <a href="https://sos2021-sep-arc.herokuapp.com/#/integrations/ChildrenEmployment">
+                            <a href="/#/integrations/ChildrenEmployment">
                                 <Button color="success"
                                     >Integración interna Children Employment</Button
                                 >
@@ -56,7 +56,7 @@
                         <br />
                         <div>
                             <a
-                                href="https://sos2021-sep-arc.herokuapp.com/#/integrations/ChildrenSchool"
+                                href="/#/integrations/ChildrenSchool"
                             >
                                 <Button color="success"
                                     >Integración interna Children School</Button
@@ -65,7 +65,7 @@
                         </div>
                         <br />
                         <div>
-                            <a href="https://sos2021-sep-arc.herokuapp.com/#/integrations/ChildrenVIH">
+                            <a href="/#/integrations/ChildrenVIH">
                                 <Button color="success"
                                     >Integración interna Children with VIH</Button
                                 >
@@ -74,10 +74,10 @@
                         <br />
                         <div>
                             <a
-                                href="https://documenter.getpostman.com/view/14948110/TzsZroMB"
+                                href="/#/integrations/Sanity"
                             >
                                 <Button color="success"
-                                    >Integración interna</Button
+                                    >Integración interna Food</Button
                                 >
                             </a>
                         </div>

@@ -67,6 +67,16 @@ app.use(pathPobreza, function(req, res) {
   req.pipe(request(url)).pipe(res);
 });
 
+//Integración Interna G10
+var pathFood='/api/v2/foodconsumption-stats';
+var apiServerHostFood= 'https://sos2021-10.herokuapp.com/';
+
+app.use(pathFood, function(req, res) {
+  var url = apiServerHostFood + req.url;
+  console.log('piped: ' + req.url);
+  req.pipe(request(url)).pipe(res);
+});
+
 app.listen(port, () => {
   console.log(`Server ready listening on ${port}`);
 });
