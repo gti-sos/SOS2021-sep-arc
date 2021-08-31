@@ -1,5 +1,5 @@
 
-(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35730/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
+(function(l, r) { if (!l || l.getElementById('livereloadscript')) return; r = l.createElement('script'); r.async = 1; r.src = '//' + (self.location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1'; r.id = 'livereloadscript'; l.getElementsByTagName('head')[0].appendChild(r) })(self.document);
 var app = (function () {
     'use strict';
 
@@ -203,9 +203,6 @@ var app = (function () {
     function select_value(select) {
         const selected_option = select.querySelector(':checked') || select.options[0];
         return selected_option && selected_option.__value;
-    }
-    function select_multiple_value(select) {
-        return [].map.call(select.querySelectorAll(':checked'), option => option.__value);
     }
     function custom_event(type, detail, bubbles = false) {
         const e = document.createEvent('CustomEvent');
@@ -23452,10 +23449,10 @@ var app = (function () {
     			div = element("div");
     			attr_dev(script, "type", "text/javascript");
     			if (!src_url_equal(script.src, script_src_value = "https://code.jscharting.com/latest/jscharting.js")) attr_dev(script, "src", script_src_value);
-    			add_location(script, file$1, 65, 4, 1923);
+    			add_location(script, file$1, 59, 2, 1572);
     			attr_dev(div, "id", "chartDiv");
-    			add_location(div, file$1, 72, 4, 2102);
-    			add_location(main, file$1, 70, 4, 2084);
+    			add_location(div, file$1, 66, 2, 1732);
+    			add_location(main, file$1, 65, 0, 1722);
     		},
     		l: function claim(nodes) {
     			throw new Error("options.hydrate only works if the component was compiled with the `hydratable: true` option");
@@ -23515,7 +23512,7 @@ var app = (function () {
     		dataG2.forEach(x => {
     			sum += parseFloat(x.schizophrenia_population);
     			console.log(dataG2);
-    			console.log(x.health_expenditure_in_percentage);
+    			console.log(x.schizophrenia_population);
     		});
 
     		array1.push({
@@ -23537,24 +23534,23 @@ var app = (function () {
     		console.log(array2);
     		console.log("OK, BIEN");
 
-    		JSC.chart('chartDiv', {
+    		JSC.chart("chartDiv", {
     			debug: true,
-    			type: 'horizontal column',
-    			palette: 'fiveColor7',
+    			type: "horizontal column",
+    			palette: "fiveColor7",
     			yAxis: {
-    				scale_type: 'stacked',
-    				label_text: 'porcentaje'
+    				scale_type: "stacked",
+    				label_text: "Porcentaje"
     			},
-    			defaultPoint_outline_color: 'darkenMore',
-    			title_label_text: 'Acme Tool Sales',
-    			xAxis_label_text: 'Año',
+    			defaultPoint_outline_color: "darkenMore",
+    			xAxis_label_text: "Año",
     			series: [
     				{
-    					name: 'Schizophrenia',
-    					id: 's1',
+    					name: "Schizophrenia",
+    					id: "s1",
     					points: array1
     				},
-    				{ name: 'Sanity', points: array2 }
+    				{ name: "Sanity", points: array2 }
     			]
     		});
     	}
@@ -23565,12 +23561,7 @@ var app = (function () {
     		if (!~writable_props.indexOf(key) && key.slice(0, 2) !== '$$' && key !== 'slot') console_1.warn(`<Sanity> was created with unknown prop '${key}'`);
     	});
 
-    	$$self.$capture_state = () => ({
-    		select_multiple_value,
-    		miAPI,
-    		API2,
-    		loadGraph
-    	});
+    	$$self.$capture_state = () => ({ miAPI, API2, loadGraph });
 
     	$$self.$inject_state = $$props => {
     		if ('miAPI' in $$props) miAPI = $$props.miAPI;
