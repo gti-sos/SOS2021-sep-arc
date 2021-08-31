@@ -45,6 +45,19 @@ app.use(pathVIH, function(req, res) {
   req.pipe(request(url)).pipe(res);
 });
 
-app.listen(port, () => {
-    console.log(`Server ready listening on ${port}`);
+
+
+//Integración Externa COVID-19
+var pathCOVID='/v3/covid-19/states';
+var apiServerHostCOVID= 'https://disease.sh';
+
+app.use(pathCOVID, function(req, res) {
+  var url = apiServerHostCOVID + req.url;
+  console.log('piped: ' + req.url);
+  req.pipe(request(url)).pipe(res);
 });
+
+app.listen(port, () => {
+  console.log(`Server ready listening on ${port}`);
+});
+

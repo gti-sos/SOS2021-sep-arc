@@ -13,6 +13,7 @@
 	import ChildrenVIH from "./front/schizophrenia_stats_API/ChildrenVIH.svelte"
 	
 	import ChildrenSchool from "./front/schizophrenia_stats_API/ChildrenSchool.svelte"
+	import Covid19 from "./front/schizophrenia_stats_API/Covid19.svelte"
 	
 	const routes = {
 		"/": Home,
@@ -23,6 +24,7 @@
 		"/integrations/childrenVIH": ChildrenVIH,
 		
 		"/integrations/childrenSchool": ChildrenSchool,
+		"/integrations/Covid19": Covid19,
 		"/schizophrenia-stats": schizophrenia_stats,
 		"/schizophrenia-stats/:country/:year": edit_schizophrenia_stats,
 		"/analytics" :schizoprenia_chart,
