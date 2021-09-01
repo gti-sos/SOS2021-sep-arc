@@ -15315,7 +15315,7 @@ var app = (function () {
 
     	const block = {
     		c: function create() {
-    			t = text("Integración interna Food");
+    			t = text("Integración interna Sanity");
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t, anchor);
@@ -15506,7 +15506,7 @@ var app = (function () {
     			attr_dev(a5, "href", "/#/integrations/Sanity");
     			add_location(a5, file$b, 75, 28, 2863);
     			add_location(div5, file$b, 74, 24, 2828);
-    			add_location(br5, file$b, 83, 24, 3214);
+    			add_location(br5, file$b, 83, 24, 3216);
     		},
     		m: function mount(target, anchor) {
     			mount_component(cardsubtitle, target, anchor);
@@ -15683,7 +15683,7 @@ var app = (function () {
     			a = element("a");
     			a.textContent = "Ana Romero Cáceres";
     			attr_dev(a, "href", "https://github.com/anaromero99");
-    			add_location(a, file$b, 87, 24, 3355);
+    			add_location(a, file$b, 87, 24, 3357);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, t0, anchor);
@@ -17216,7 +17216,7 @@ var app = (function () {
     	return block;
     }
 
-    // (263:24) <Button                              outline                              color="primary"                              on:click={insertschizophrenia}                          >
+    // (263:24) <Button id="addSchizophrenia"                              outline                              color="primary"                              on:click={insertschizophrenia}                          >
     function create_default_slot_18(ctx) {
     	let t;
 
@@ -17236,7 +17236,7 @@ var app = (function () {
     		block,
     		id: create_default_slot_18.name,
     		type: "slot",
-    		source: "(263:24) <Button                              outline                              color=\\\"primary\\\"                              on:click={insertschizophrenia}                          >",
+    		source: "(263:24) <Button id=\\\"addSchizophrenia\\\"                              outline                              color=\\\"primary\\\"                              on:click={insertschizophrenia}                          >",
     		ctx
     	});
 
@@ -17255,17 +17255,17 @@ var app = (function () {
     			path0 = svg_element("path");
     			path1 = svg_element("path");
     			attr_dev(path0, "d", "M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z");
-    			add_location(path0, file$9, 302, 36, 11326);
+    			add_location(path0, file$9, 302, 36, 11456);
     			attr_dev(path1, "fill-rule", "evenodd");
     			attr_dev(path1, "d", "M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z");
-    			add_location(path1, file$9, 305, 36, 11614);
+    			add_location(path1, file$9, 305, 36, 11744);
     			attr_dev(svg, "xmlns", "http://www.w3.org/2000/svg");
     			attr_dev(svg, "width", "16");
     			attr_dev(svg, "height", "16");
     			attr_dev(svg, "fill", "currentColor");
     			attr_dev(svg, "class", "bi bi-trash");
     			attr_dev(svg, "viewBox", "0 0 16 16");
-    			add_location(svg, file$9, 294, 32, 10909);
+    			add_location(svg, file$9, 294, 32, 11039);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, svg, anchor);
@@ -17355,14 +17355,14 @@ var app = (function () {
     			create_component(button.$$.fragment);
     			t10 = space();
     			attr_dev(a, "href", a_href_value = "#/schizophrenia-stats/" + /*schizophreniaStat*/ ctx[37].country + "/" + /*schizophreniaStat*/ ctx[37].year);
-    			add_location(a, file$9, 275, 28, 9898);
-    			add_location(td0, file$9, 274, 24, 9864);
-    			add_location(td1, file$9, 281, 24, 10198);
-    			add_location(td2, file$9, 282, 24, 10259);
-    			add_location(td3, file$9, 283, 24, 10333);
-    			add_location(td4, file$9, 284, 24, 10409);
-    			add_location(td5, file$9, 285, 24, 10490);
-    			add_location(tr, file$9, 273, 20, 9834);
+    			add_location(a, file$9, 275, 28, 10028);
+    			add_location(td0, file$9, 274, 24, 9994);
+    			add_location(td1, file$9, 281, 24, 10328);
+    			add_location(td2, file$9, 282, 24, 10389);
+    			add_location(td3, file$9, 283, 24, 10463);
+    			add_location(td4, file$9, 284, 24, 10539);
+    			add_location(td5, file$9, 285, 24, 10620);
+    			add_location(tr, file$9, 273, 20, 9964);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, tr, anchor);
@@ -17481,6 +17481,7 @@ var app = (function () {
     	}
 
     	let input0_props = {
+    		id: "country",
     		type: "text",
     		placeholder: "Introduzca un país"
     	};
@@ -17497,6 +17498,7 @@ var app = (function () {
     	}
 
     	let input1_props = {
+    		id: "year",
     		type: "number",
     		placeholder: "Introduzca un año"
     	};
@@ -17513,6 +17515,7 @@ var app = (function () {
     	}
 
     	let input2_props = {
+    		id: "schizophrenia_men",
     		type: "number",
     		placeholder: "Sólo caracteres numéricos",
     		step: "1",
@@ -17531,6 +17534,7 @@ var app = (function () {
     	}
 
     	let input3_props = {
+    		id: "schizophrenia_women",
     		type: "number",
     		placeholder: "Sólo caracteres numéricos",
     		step: "1",
@@ -17549,6 +17553,7 @@ var app = (function () {
     	}
 
     	let input4_props = {
+    		id: "schizophrenia_population",
     		type: "number",
     		placeholder: "Sólo caracteres numéricos",
     		step: "1",
@@ -17564,6 +17569,7 @@ var app = (function () {
 
     	button = new Button({
     			props: {
+    				id: "addSchizophrenia",
     				outline: true,
     				color: "primary",
     				$$slots: { default: [create_default_slot_18] },
@@ -17644,11 +17650,11 @@ var app = (function () {
     			set_style(thead, "text-align", "center");
     			add_location(thead, file$9, 208, 12, 7156);
     			add_location(td0, file$9, 220, 20, 7711);
-    			add_location(td1, file$9, 227, 20, 7994);
-    			add_location(td2, file$9, 234, 20, 8275);
-    			add_location(td3, file$9, 243, 20, 8654);
-    			add_location(td4, file$9, 252, 20, 9035);
-    			add_location(td5, file$9, 261, 20, 9421);
+    			add_location(td1, file$9, 227, 20, 8008);
+    			add_location(td2, file$9, 234, 20, 8301);
+    			add_location(td3, file$9, 243, 20, 8705);
+    			add_location(td4, file$9, 252, 20, 9112);
+    			add_location(td5, file$9, 261, 20, 9529);
     			add_location(tr1, file$9, 219, 16, 7685);
     			set_style(tbody, "background", "white");
     			set_style(tbody, "color", "black");
@@ -17904,7 +17910,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*country*/ ctx[34];
     			option.value = option.__value;
-    			add_location(option, file$9, 329, 20, 12568);
+    			add_location(option, file$9, 329, 20, 12698);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -17957,7 +17963,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$9, 331, 16, 12637);
+    			add_location(option, file$9, 331, 16, 12767);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -18148,7 +18154,7 @@ var app = (function () {
     			t = text(t_value);
     			option.__value = option_value_value = /*year*/ ctx[31];
     			option.value = option.__value;
-    			add_location(option, file$9, 340, 20, 12962);
+    			add_location(option, file$9, 340, 20, 13092);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, option, anchor);
@@ -18201,7 +18207,7 @@ var app = (function () {
     			option.textContent = "-";
     			option.__value = "-";
     			option.value = option.__value;
-    			add_location(option, file$9, 342, 16, 13028);
+    			add_location(option, file$9, 342, 16, 13158);
     		},
     		m: function mount(target, anchor) {
     			for (let i = 0; i < each_blocks.length; i += 1) {
@@ -19016,7 +19022,7 @@ var app = (function () {
     			t0 = text("ERROR: ");
     			t1 = text(/*errorMsg*/ ctx[8]);
     			set_style(p, "color", "red");
-    			add_location(p, file$9, 401, 8, 14914);
+    			add_location(p, file$9, 401, 8, 15044);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -19054,7 +19060,7 @@ var app = (function () {
     			t0 = text("ÉXITO: ");
     			t1 = text(/*okMsg*/ ctx[7]);
     			set_style(p, "color", "green");
-    			add_location(p, file$9, 404, 8, 14995);
+    			add_location(p, file$9, 404, 8, 15125);
     		},
     		m: function mount(target, anchor) {
     			insert_dev(target, p, anchor);
@@ -19226,22 +19232,22 @@ var app = (function () {
     			create_component(button1.$$.fragment);
     			set_style(h1, "text-align", "center");
     			add_location(h1, file$9, 184, 4, 6294);
-    			add_location(br0, file$9, 318, 4, 12224);
+    			add_location(br0, file$9, 318, 4, 12354);
     			attr_dev(div0, "class", "col-md-2");
-    			add_location(div0, file$9, 320, 4, 12238);
+    			add_location(div0, file$9, 320, 4, 12368);
     			attr_dev(div1, "class", "col-md-2");
-    			add_location(div1, file$9, 335, 4, 12717);
-    			add_location(br1, file$9, 348, 8, 13150);
+    			add_location(div1, file$9, 335, 4, 12847);
+    			add_location(br1, file$9, 348, 8, 13280);
     			attr_dev(button0, "outline", "");
     			set_style(button0, "font-size", "16px");
     			set_style(button0, "border-radius", "4px");
     			set_style(button0, "background-color", "secondary");
     			attr_dev(button0, "color", "secondary");
     			attr_dev(button0, "class", "btn btn-outline-secondary");
-    			add_location(button0, file$9, 349, 8, 13166);
+    			add_location(button0, file$9, 349, 8, 13296);
     			set_style(div2, "text-align", "left");
-    			add_location(div2, file$9, 347, 4, 13110);
-    			add_location(br2, file$9, 357, 4, 13472);
+    			add_location(div2, file$9, 347, 4, 13240);
+    			add_location(br2, file$9, 357, 4, 13602);
     			add_location(main, file$9, 183, 0, 6282);
     		},
     		l: function claim(nodes) {

@@ -219,21 +219,21 @@
             <tbody style="background:white;color:black;text-align:center;">
                 <tr>
                     <td>
-                        <Input
+                        <Input id ="country"
                             type="text"
                             placeholder="Introduzca un país"
                             bind:value={newSchizophrenia.country}
                         /></td
                     >
                     <td>
-                        <Input
+                        <Input id = "year"
                             type="number"
                             placeholder="Introduzca un año"
                             bind:value={newSchizophrenia.year}
                         /></td
                     >
                     <td>
-                        <Input
+                        <Input id = "schizophrenia_men"
                             type="number"
                             placeholder="Sólo caracteres numéricos"
                             step="1"
@@ -242,7 +242,7 @@
                         />
                     </td>
                     <td>
-                        <Input
+                        <Input id ="schizophrenia_women"
                             type="number"
                             placeholder="Sólo caracteres numéricos"
                             step="1"
@@ -251,7 +251,7 @@
                         /></td
                     >
                     <td>
-                        <Input
+                        <Input id ="schizophrenia_population"
                             type="number"
                             placeholder="Sólo caracteres numéricos"
                             step="1"
@@ -260,7 +260,7 @@
                         /></td
                     >
                     <td>
-                        <Button
+                        <Button id="addSchizophrenia"
                             outline
                             color="primary"
                             on:click={insertschizophrenia}
