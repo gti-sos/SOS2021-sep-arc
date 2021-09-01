@@ -77,7 +77,7 @@
                                 href="/#/integrations/Sanity"
                             >
                                 <Button color="success"
-                                    >Integración interna Food</Button
+                                    >Integración interna Sanity</Button
                                 >
                             </a>
                         </div>
