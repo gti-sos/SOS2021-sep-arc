@@ -10,8 +10,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
       - run: npm install &
-      - run: npm run build
+      - run: npm build
       - run: npx newman tests/schizophrenia_stats_integration.json 
       - run: npx newman tests/schizophrenia_stats_integration_D01.json 
       - run: npx newman tests/schizophrenia_stats_integration_v2.json
-      - run : npm test
+      - run : node tests/e2e.js 
