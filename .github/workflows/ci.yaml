@@ -14,4 +14,4 @@ jobs:
       - run: npx newman tests/schizophrenia_stats_integration.json 
       - run: npx newman tests/schizophrenia_stats_integration_D01.json 
       - run: npx newman tests/schizophrenia_stats_integration_v2.json
-      - run: npm tests/e2e.js
+      - run: npx newman tests/e2e.js
