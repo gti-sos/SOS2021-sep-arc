@@ -52,6 +52,7 @@
         inverted: true
     },
     title: {
+        text: 'Children Employment'
     },
     xAxis: {
         categories: t,
