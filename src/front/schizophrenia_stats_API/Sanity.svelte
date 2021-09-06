@@ -63,6 +63,20 @@
     on:load={loadGraph}></script>
 </svelte:head>
 
+  
+<br/>   
 <main>
+  <figure class="highcharts-figure">
+    <div id="container" />
+    <p class="highcharts-description" />
+  </figure>
   <div id="chartDiv" />
+
+  <br/> 
+  <Nav>
+    <NavItem>
+      <NavLink href="/">Página Principal</NavLink>
+    </NavItem>
+  </Nav> 
+  
 </main>

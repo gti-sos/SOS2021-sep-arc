@@ -47,7 +47,7 @@
                         </div>
                         <br />
                         <div>
-                            <a href="/#/integrations/ChildrenEmployment">
+                            <a href="/#/integrations/Employment">
                                 <Button color="success"
                                     >Integración interna Children Employment</Button
                                 >
